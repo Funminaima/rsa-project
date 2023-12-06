@@ -22,7 +22,9 @@ const QuotePage = () => {
         addonsData.map((addon: any) => ({
           ...addon,
           isSelected: false,
-          id: Math.floor(Math.random() * 100),
+          id: Math.floor(
+            Math.random() * Math.floor(Math.random() * Date.now())
+          ),
         }))
       );
     });
@@ -74,7 +76,6 @@ const QuotePage = () => {
   };
 
   const onClickSelectExtra = (addon: IAddon) => {
-    console.log(addon, "addon");
     const selectedAddon = addons.map((prevAddon: any) =>
       prevAddon.id === addon.id
         ? { ...prevAddon, isSelected: !prevAddon.isSelected }
@@ -107,7 +108,6 @@ const QuotePage = () => {
       return basePrice + extrasTotal;
     }
   };
-  console.log(addons);
   return (
     <div>
       <Quote

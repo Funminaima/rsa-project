@@ -55,6 +55,7 @@ body {
 .payment-container h1 {
   margin-bottom: 0px;
   line-height: 0;
+  font-size: 32px;
 }
 .p-div {
   display: flex;
@@ -74,7 +75,7 @@ body {
 .switch-btn {
   background-color: #4caf50;
   color: white;
-  padding: 15px 20px;
+  padding: 15px 40px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
