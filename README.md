@@ -34,7 +34,7 @@ Make sure you have the following installed on your machine:
 1. Clone the repository: Make sure to pull from the master
 
 ```bash
-https://github.com/Funminaima/schemeserve.git)https://github.com/Funminaima/schemeserve.git
+https://github.com/Funminaima/rsa-project.git
 cd rsa-project
 npm install
 npm start
