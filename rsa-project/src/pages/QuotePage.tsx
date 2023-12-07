@@ -12,14 +12,14 @@ const QuotePage = () => {
 
   useEffect(() => {
     // Fetch quote data
-    getQuote().then((quoteData: any) => {
+    getQuote().then((quoteData: IQuote[]) => {
       setQuote(quoteData[0]);
     });
 
     // Fetch addons data
-    getaddons().then((addonsData: any) => {
+    getaddons().then((addonsData: IAddon[]) => {
       setAddons(
-        addonsData.map((addon: any) => ({
+        addonsData.map((addon: IAddon) => ({
           ...addon,
           isSelected: false,
           id: Math.floor(
@@ -76,7 +76,7 @@ const QuotePage = () => {
   };
 
   const onClickSelectExtra = (addon: IAddon) => {
-    const selectedAddon = addons.map((prevAddon: any) =>
+    const selectedAddon = addons.map((prevAddon: IAddon) =>
       prevAddon.id === addon.id
         ? { ...prevAddon, isSelected: !prevAddon.isSelected }
         : prevAddon
